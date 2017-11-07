@@ -17,7 +17,8 @@
     <property name="hibernate.current_session_context_class">thread</property><!--配置CurrentSession-->
 
 
-
+    <mapping class="xin.zcglory.entity.People"/>
+    <mapping resource="mapping/People.hbm.xml"/>
 
   </session-factory>
 </hibernate-configuration>
