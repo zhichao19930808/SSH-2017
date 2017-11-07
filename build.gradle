@@ -1,0 +1,29 @@
+group 'SSH-2017'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // servlet
+    compile 'javax:javaee-api:7.0'
+    //mysql
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.8-dmr'
+
+    //hibernate
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.12.Final'
+
+    //spring
+    compile 'org.springframework:spring-context-support:5.0.0.RELEASE'
+    compile 'org.springframework:spring-orm:5.0.0.RELEASE'
+    compile 'org.springframework:spring-webmvc:5.0.0.RELEASE'
+    compile group: 'aspectj', name: 'aspectjrt', version: '1.5.4'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.12'//spring集成AspectJ LTW织入器所需包
+}
