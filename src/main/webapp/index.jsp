@@ -22,7 +22,7 @@
           <td>性别</td>
           <td>生日</td>
       </tr>
-      <s:iterator id="p" value="peoples">
+      <s:iterator value="peoples" var="p">
           <tr>
               <td><s:property value="#p.id"/> </td>
               <td><s:property value="#p.name"/> </td>
