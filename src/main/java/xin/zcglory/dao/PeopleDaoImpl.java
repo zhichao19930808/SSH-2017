@@ -2,11 +2,14 @@ package xin.zcglory.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import xin.zcglory.entity.People;
 
 import java.util.List;
-
+@Repository
 public class PeopleDaoImpl implements PeopleDao {
+    @Autowired
     private SessionFactory sessionFactory;
     @Override
     public void add(People people) {

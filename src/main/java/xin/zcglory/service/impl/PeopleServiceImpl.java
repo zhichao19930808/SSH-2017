@@ -1,45 +1,48 @@
 package xin.zcglory.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import xin.zcglory.dao.PeopleDaoImpl;
 import xin.zcglory.entity.People;
 import xin.zcglory.service.PeopleService;
 
 import java.util.List;
-
+@Service
 public class PeopleServiceImpl implements PeopleService {
-    private PeopleDaoImpl peopleDao;
+    @Autowired
+    private PeopleDaoImpl peopleDaoimpl;
     @Override
     public void add(People people) {
-        peopleDao.add(people);
+        peopleDaoimpl.add(people);
     }
 
     @Override
     public void delete(String id) {
-        peopleDao.delete(id);
+        peopleDaoimpl.delete(id);
     }
 
     @Override
     public People findByid(String id) {
-        return peopleDao.findByid(id);
+        return peopleDaoimpl.findByid(id);
     }
 
     @Override
     public void update(People people) {
-        peopleDao.update(people);
+        peopleDaoimpl.update(people);
     }
 
     @Override
     public List<People> findAll() {
         String sql = "from People";
-        return peopleDao.find(sql);
+        return peopleDaoimpl.find(sql);
     }
 
 
-    public PeopleDaoImpl getPeopleDao() {
-        return peopleDao;
+    public PeopleDaoImpl getPeopleDaoimpl() {
+        return peopleDaoimpl;
     }
 
-    public void setPeopleDao(PeopleDaoImpl peopleDao) {
-        this.peopleDao = peopleDao;
+    public void setPeopleDaoimpl(PeopleDaoImpl peopleDaoimpl) {
+        this.peopleDaoimpl = peopleDaoimpl;
     }
 }
