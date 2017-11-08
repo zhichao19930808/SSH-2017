@@ -13,8 +13,13 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
     </bean>
+    <!--注入dao层-->
     <bean id="peopleDaoImpl" class="xin.zcglory.dao.PeopleDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--注入service层-->
+    <bean id="peopleServiceImpl" class="xin.zcglory.service.impl.PeopleServiceImpl">
+        <property name="peopleDao" ref="peopleDaoImpl"/>
     </bean>
 
 </beans>

@@ -11,5 +11,23 @@
       <user-name>root</user-name>
       <introspection-schemas>*:db_test</introspection-schemas>
     </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="8403278f-3012-4f30-bb3b-72816c4bd6d0">
+      <database-info product="MySQL" version="5.7.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:db_test</introspection-schemas>
+    </data-source>
+    <data-source name="sessionFactory/Hibernate" uuid="8af43e2e-206e-407c-a581-2f31babce221">
+      <database-info product="MySQL" version="5.7.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:db_test</introspection-schemas>
+    </data-source>
   </component>
 </project>

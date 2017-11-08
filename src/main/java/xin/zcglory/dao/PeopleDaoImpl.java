@@ -47,8 +47,12 @@ public class PeopleDaoImpl implements PeopleDao {
 
     @Override
     public List<People> find(String sql) {
-
-        return null;
+        Session session = sessionFactory.openSession();
+        session.getTransaction().begin();
+        List<People> peopleList = session.createQuery(sql).list();
+        session.getTransaction().commit();
+        session.close();
+        return peopleList;
     }
 
 
