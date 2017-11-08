@@ -30,7 +30,7 @@ public class PeopleDaoImpl implements PeopleDao {
     public People findByid(String id) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
-        People people = session.get(People.class,id);
+        People people = (People) session.get(People.class,id);
         session.getTransaction().commit();
         session.close();
         return people;

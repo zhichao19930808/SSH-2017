@@ -10,7 +10,7 @@
        xmlns:tx="http://www.springframework.org/schema/tx">
 
     <!--将hibernate核心配置整合到spring-->
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
     </bean>
     <!--注入dao层-->
@@ -20,6 +20,10 @@
     <!--注入service层-->
     <bean id="peopleServiceImpl" class="xin.zcglory.service.impl.PeopleServiceImpl">
         <property name="peopleDao" ref="peopleDaoImpl"/>
+    </bean>
+    <!--注入action层-->
+    <bean id="peopleAction" class="xin.zcglory.action.PeopleAction">
+        <property name="peopleService" ref="peopleServiceImpl"/>
     </bean>
 
 </beans>
