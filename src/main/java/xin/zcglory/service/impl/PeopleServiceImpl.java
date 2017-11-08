@@ -38,11 +38,4 @@ public class PeopleServiceImpl implements PeopleService {
     }
 
 
-    public PeopleDaoImpl getPeopleDaoimpl() {
-        return peopleDaoimpl;
-    }
-
-    public void setPeopleDaoimpl(PeopleDaoImpl peopleDaoimpl) {
-        this.peopleDaoimpl = peopleDaoimpl;
-    }
 }

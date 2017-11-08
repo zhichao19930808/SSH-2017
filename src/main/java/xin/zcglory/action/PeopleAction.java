@@ -33,13 +33,6 @@ public class PeopleAction extends ActionSupport {
     }
 
 
-    public PeopleServiceImpl getPeopleServiceImpl() {
-        return peopleServiceImpl;
-    }
-
-    public void setPeopleServiceImpl(PeopleServiceImpl peopleServiceImpl) {
-        this.peopleServiceImpl = peopleServiceImpl;
-    }
 
     public List<People> getPeoples() {
         return peoples;
